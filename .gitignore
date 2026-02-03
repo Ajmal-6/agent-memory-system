@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data & Logs
+data/
+logs/
+*.db
+*.sqlite
+chroma_db/
+
+# Environment variables
+.env
+.env.local
+
+# System
+.DS_Store
+Thumbs.db
+
+# Output
+output/
+results/

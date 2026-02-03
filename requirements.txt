@@ -1,0 +1,31 @@
+# Core dependencies
+chromadb>=0.4.0
+sentence-transformers>=2.2.2
+numpy>=1.24.3
+pandas>=2.0.3
+
+# LLM dependencies (choose one option)
+# Option 1: Using Hugging Face locally
+transformers>=4.36.0
+torch>=2.1.0
+accelerate>=0.25.0
+
+# Option 2: Using OpenAI-compatible API (Free tier)
+openai>=1.12.0
+ollama>=0.1.7  # If using Ollama locally
+
+# Development & Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+tqdm>=4.66.1
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.11.0
+flake8>=6.1.0
+
+# Logging & Monitoring
+loguru>=0.7.2
+
+# FastAPI if you want web interface (optional)
+fastapi>=0.104.0
+uvicorn>=0.24.0

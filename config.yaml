@@ -1,0 +1,41 @@
+memory:
+  short_term:
+    capacity: 10
+    ttl_seconds: 3600  # 1 hour
+    
+  long_term:
+    vector_db: "chromadb"  # or "faiss"
+    collection_name: "agent_memory"
+    persist_directory: "./chroma_db"
+    
+  scoring:
+    weights:
+      recency: 0.3
+      frequency: 0.2
+      relevance: 0.4
+      task_success: 0.1
+    recency_decay_rate: 0.1
+    frequency_window: 100
+    
+  forgetting:
+    short_term_threshold: 0.2
+    long_term_threshold: 0.3
+    cleanup_interval: 50  # operations
+    batch_size: 10
+
+agent:
+  llm:
+    provider: "huggingface"  # or "ollama", "openai"
+    model_name: "microsoft/DialoGPT-small"
+    max_tokens: 150
+    temperature: 0.7
+    
+  tasks:
+    default_context_window: 5
+    enable_self_reflection: true
+
+logging:
+  level: "INFO"
+  file_path: "./logs/memory_events.log"
+  format: "json"  # or "text"
+  rotation: "10 MB"
